@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://c223nmcf65ug5"]
+
+[ext_resource type="Script" uid="uid://80dglyw6v1ft" path="res://Scripts/Battle.gd" id="1_2h7oj"]
+[ext_resource type="Texture2D" uid="uid://b57y8oryhnxn4" path="res://Assets/Placeholder Art/backdrop.jpg" id="1_vr6xi"]
+[ext_resource type="PackedScene" uid="uid://8nx37igr05ht" path="res://Scenes/Enemy.tscn" id="1_wvl2i"]
+
+[node name="Battle" type="Node2D"]
+script = ExtResource("1_2h7oj")
+
+[node name="Backdrop" type="Sprite2D" parent="."]
+position = Vector2(577, 325)
+scale = Vector2(0.635, 0.635)
+texture = ExtResource("1_vr6xi")
+
+[node name="Enemy" parent="." instance=ExtResource("1_wvl2i")]
+position = Vector2(381, 360)
+
+[node name="Enemy2" parent="." instance=ExtResource("1_wvl2i")]
+position = Vector2(717, 361)
+max_hp = 200.0
+
+[node name="PlayerHP" type="ProgressBar" parent="."]
+offset_left = 812.0
+offset_top = 13.0
+offset_right = 1132.0
+offset_bottom = 40.0
