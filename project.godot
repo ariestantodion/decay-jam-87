@@ -14,6 +14,11 @@ config/name="decay-jam-87"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 
+[autoload]
+
+DPManager="*res://scripts/managers/DPManager.gd"
+AbilityManager="*res://scripts/managers/AbilityManager.gd"
+
 [display]
 
 window/size/viewport_width=1280

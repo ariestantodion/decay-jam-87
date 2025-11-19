@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7ciniuj6hmra"]
+
+[ext_resource type="Script" uid="uid://c6qqoy4cmme1s" path="res://scripts/overworld/OverworldEnemy.gd" id="1_4r5xm"]
+[ext_resource type="Texture2D" uid="uid://dv4rum11m7fiy" path="res://assets/characters/Plant_Enemy.png" id="2_4stu6"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_26lii"]
+radius = 451.0
+height = 902.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jpaay"]
+radius = 1441.11
+
+[node name="OverworldEnemy" type="Node2D" groups=["overworld_enemy"]]
+script = ExtResource("1_4r5xm")
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Visuals"]
+texture = ExtResource("2_4stu6")
+
+[node name="Collision" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collision"]
+modulate = Color(1, 1, 1, 0.266667)
+shape = SubResource("CapsuleShape2D_26lii")
+
+[node name="AggroArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AggroArea"]
+shape = SubResource("CircleShape2D_jpaay")
+
+[connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]
+[connection signal="body_entered" from="AggroArea" to="." method="_on_aggro_area_body_entered"]
+[connection signal="body_exited" from="AggroArea" to="." method="_on_aggro_area_body_exited"]

@@ -10,6 +10,13 @@ extends CharacterBody2D
 var bob_time: float = 0.0
 @onready var visuals := $Visuals
 
+func _ready() -> void:
+	DPManager.add_dp(100)
+
+	print("Before:", AbilityManager.get_level("damage"))
+	AbilityManager.upgrade("damage")
+	print("After:", AbilityManager.get_level("damage"))
+
 func _physics_process(delta: float) -> void:
 	# Movement
 	var input_vector := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
