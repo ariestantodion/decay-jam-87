@@ -1,9 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://8nx37igr05ht"]
+[gd_scene load_steps=11 format=3 uid="uid://8nx37igr05ht"]
 
 [ext_resource type="Script" uid="uid://bsa451k8qwlmd" path="res://scripts/battle/Enemy.gd" id="1_m1htj"]
-[ext_resource type="Texture2D" uid="uid://bndbba1ok26j8" path="res://assets/Placeholder Art/happy_sprite.png" id="2_kpr8r"]
-[ext_resource type="Texture2D" uid="uid://cx4gdy35sv8fp" path="res://assets/Placeholder Art/neutral_sprite.png" id="3_1exfc"]
-[ext_resource type="Texture2D" uid="uid://ctsc82seiwog0" path="res://assets/Placeholder Art/angry_sprite.png" id="4_mo1ky"]
+[ext_resource type="Texture2D" uid="uid://bndbba1ok26j8" path="res://Assets/Placeholder Art/happy_sprite.png" id="2_kpr8r"]
+[ext_resource type="Texture2D" uid="uid://cx4gdy35sv8fp" path="res://Assets/Placeholder Art/neutral_sprite.png" id="3_1exfc"]
+[ext_resource type="Texture2D" uid="uid://ctsc82seiwog0" path="res://Assets/Placeholder Art/angry_sprite.png" id="4_mo1ky"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6bs3c"]
 animations = [{
@@ -25,6 +25,54 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_uoxpr"]
 radius = 44.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_51x3w"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hr68b"]
+bg_color = Color(1, 0.172549, 0.133333, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jt4ur"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xtvj5"]
+bg_color = Color(1.34766e-06, 0.666268, 0.811969, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
 [node name="Enemy" type="Node2D"]
 position = Vector2(586, 307)
 script = ExtResource("1_m1htj")
@@ -44,12 +92,18 @@ offset_left = -126.0
 offset_top = -134.0
 offset_right = 129.0
 offset_bottom = -107.0
+theme_override_styles/background = SubResource("StyleBoxFlat_51x3w")
+theme_override_styles/fill = SubResource("StyleBoxFlat_hr68b")
+show_percentage = false
 
 [node name="EnemyAttack" type="ProgressBar" parent="Area2D"]
 offset_left = -67.0
 offset_top = -91.0
 offset_right = 65.0
 offset_bottom = -64.0
+theme_override_styles/background = SubResource("StyleBoxFlat_jt4ur")
+theme_override_styles/fill = SubResource("StyleBoxFlat_xtvj5")
+show_percentage = false
 
 [connection signal="mouse_entered" from="Area2D" to="." method="area_2d_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="area_2d_exited"]
