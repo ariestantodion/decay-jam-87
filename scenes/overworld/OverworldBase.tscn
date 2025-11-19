@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ck25lhwheomc5" path="res://assets/tilesets/Solaria Demo Tiles.png" id="1_i323y"]
 [ext_resource type="Texture2D" uid="uid://cgcbahhetgb0y" path="res://assets/characters/Death.png" id="2_i323y"]
 [ext_resource type="PackedScene" uid="uid://b7ciniuj6hmra" path="res://scenes/overworld/OverworldEnemy.tscn" id="4_31ol0"]
-[ext_resource type="Script" uid="uid://3o22myntnqs1" path="res://scenes/overworld/CameraFollow.gd" id="4_jmkhp"]
+[ext_resource type="Script" uid="uid://3o22myntnqs1" path="res://scripts/overworld/CameraFollow.gd" id="4_jmkhp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_31ol0"]
 texture = ExtResource("1_i323y")
