@@ -10,12 +10,13 @@ extends CharacterBody2D
 var bob_time: float = 0.0
 @onready var visuals := $Visuals
 
-func _ready() -> void:
-	DPManager.add_dp(100)
-
-	print("Before:", AbilityManager.get_level("damage"))
-	AbilityManager.upgrade("damage")
-	print("After:", AbilityManager.get_level("damage"))
+#Testing the AbilityManger here...
+#func _ready() -> void:
+#	DPManager.add_dp(100)
+#
+#	print("Before:", AbilityManager.get_level("damage"))
+#	AbilityManager.upgrade("damage")
+#	print("After:", AbilityManager.get_level("damage"))
 
 func _physics_process(delta: float) -> void:
 	# Movement
