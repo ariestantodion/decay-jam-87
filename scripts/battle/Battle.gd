@@ -6,6 +6,7 @@ extends Node2D
 var battle_over = false
 var cursor = load("res://Assets/Placeholder Art/cursor.png")
 
+#Ends Battle scene
 func exit_battle():
 	battle_over = true
 	scene_transition.play("fade_out")
@@ -15,7 +16,6 @@ func _ready():
 	Input.set_custom_mouse_cursor(cursor, 0, Vector2(16, 16))
 	player_hp.value = BattleManager.player_hp
 	
-
 func _process(delta):
 	player_hp.value = BattleManager.player_hp
 	number_of_enemies = get_tree().get_nodes_in_group("Enemies").size()
