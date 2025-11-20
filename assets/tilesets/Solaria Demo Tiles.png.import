@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ck25lhwheomc5"
-path="res://.godot/imported/Solaria Demo Tiles.png-e636043d91d83e18fc625caf22203254.ctex"
+path="res://.godot/imported/Solaria Demo Tiles.png-16d7e436b52f9d5cac1ce08d47687c15.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tilesets/Solaria Demo Tiles.png"
-dest_files=["res://.godot/imported/Solaria Demo Tiles.png-e636043d91d83e18fc625caf22203254.ctex"]
+source_file="res://Assets/tilesets/Solaria Demo Tiles.png"
+dest_files=["res://.godot/imported/Solaria Demo Tiles.png-16d7e436b52f9d5cac1ce08d47687c15.ctex"]
 
 [params]
 

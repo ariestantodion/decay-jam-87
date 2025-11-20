@@ -3,6 +3,7 @@ extends Node2D
 @onready var enemy_hp = get_node("Area2D/EnemyHealth")
 @onready var enemy_attack = get_node("Area2D/EnemyAttack")
 @onready var enemy_sprite = get_node("Area2D/EnemySprite")
+@onready var animation = $AnimationPlayer
 @export var max_hp: float = 100
 @export var attack_time = 10
 var stunned_hp_style = StyleBoxFlat.new()
@@ -26,6 +27,8 @@ func area_2d_exited():
 #Removes enemy from Battle, gives player DP
 func die():
 	#Add signal that gives player DP
+	animation.play("enemy_fade_out")
+	await get_tree().create_timer(0.7).timeout
 	queue_free()
 
 #Decreases enemy_hp by poison_damage 5 times
@@ -33,6 +36,8 @@ func poisoned():
 	enemy_hp.add_theme_stylebox_override("fill", poison_hp_style)
 	for i in range(5):
 		enemy_hp.value -= poison_damage
+		if enemy_hp.value <= 0:
+			die()
 		await get_tree().create_timer(1.0).timeout
 	enemy_hp.add_theme_stylebox_override("fill", normal_hp_style)
 
@@ -107,9 +112,9 @@ func _process(delta):
 		#Add code that damages player
 	if mouse_over:
 		enemy_hp.value -= damage_per_second * delta
-		if enemy_hp.value/max_hp <= 0.5 and enemy_hp.value/max_hp > 0.25:
+		if enemy_hp.value/max_hp <= 0.66 and enemy_hp.value/max_hp > 0.33:
 			enemy_sprite.frame = 1
-		if  enemy_hp.value/max_hp <= 0.25:
+		if  enemy_hp.value/max_hp <= 0.33:
 			enemy_sprite.frame = 2
 		if enemy_hp.value <= 0:
 			die()

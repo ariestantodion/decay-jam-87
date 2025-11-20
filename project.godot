@@ -18,12 +18,17 @@ config/icon="res://Assets/icon.svg"
 
 DPManager="*res://scripts/managers/DPManager.gd"
 AbilityManager="*res://scripts/managers/AbilityManager.gd"
+BattleManager="*res://scripts/managers/BattleManager.gd"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="viewport"
+
+[global_group]
+
+Enemies=""
 
 [input]
 
