@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://oto2em6t0e5s"]
+[gd_scene load_steps=3 format=3 uid="uid://oto2em6t0e5s"]
 
 [ext_resource type="Script" uid="uid://2iengd301v4b" path="res://scripts/overworld/pickups/DPOrb.gd" id="1_0lua2"]
+[ext_resource type="Texture2D" uid="uid://bgsmgx646or0v" path="res://assets/Pickups/DP_Orb.png" id="2_f2yng"]
 
 [node name="DPOrb" type="Node2D"]
 script = ExtResource("1_0lua2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("2_f2yng")

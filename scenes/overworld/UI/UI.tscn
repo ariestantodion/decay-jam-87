@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckafvnefn66tl"]
+
+[ext_resource type="Script" uid="uid://cc4hnbb77vjca" path="res://scripts/overworld/UI/DP_UI.gd" id="1_amrpv"]
+[ext_resource type="Texture2D" uid="uid://bwoe5i0006ath" path="res://assets/ui/UI_DP_Counter.png" id="2_kmlfo"]
+[ext_resource type="Texture2D" uid="uid://bgsmgx646or0v" path="res://assets/Pickups/DP_Orb.png" id="3_fschw"]
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="DP_UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+script = ExtResource("1_amrpv")
+
+[node name="Background" type="TextureRect" parent="DP_UI"]
+layout_mode = 0
+offset_left = -202.0
+offset_top = 9.0
+offset_right = 1334.0
+offset_bottom = 1033.0
+scale = Vector2(0.144211, 0.11654)
+texture = ExtResource("2_kmlfo")
+
+[node name="DP_Icon" type="TextureRect" parent="DP_UI"]
+layout_mode = 0
+offset_left = -178.0
+offset_top = 49.0
+offset_right = 22.0
+offset_bottom = 249.0
+scale = Vector2(0.244479, 0.244479)
+texture = ExtResource("3_fschw")
+
+[node name="DP_Label" type="Label" parent="DP_UI"]
+layout_mode = 0
+offset_left = -122.0
+offset_top = 51.0
+offset_right = -36.0
+offset_bottom = 93.0
+theme_override_colors/font_color = Color(0.835718, 7.62872e-06, 3.36915e-06, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+
+[node name="DPOrbTarget" type="Control" parent="DP_UI"]
+anchors_preset = 0
+offset_left = -154.0
+offset_top = 102.0
+offset_right = -154.0
+offset_bottom = 102.0

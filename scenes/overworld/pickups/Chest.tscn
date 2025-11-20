@@ -1,38 +1,38 @@
-[gd_scene load_steps=6 format=3 uid="uid://csobpib3t2we4"]
+[gd_scene load_steps=7 format=3 uid="uid://csobpib3t2we4"]
 
 [ext_resource type="Script" uid="uid://cjo4uof1xvdcb" path="res://scripts/overworld/pickups/Chest.gd" id="1_axsbj"]
 [ext_resource type="Texture2D" uid="uid://bo51glodm4a4a" path="res://assets/Pickups/Chest_Closed.png" id="1_oytiu"]
 [ext_resource type="Texture2D" uid="uid://d267uxe58dna0" path="res://assets/Pickups/Chest_Open.png" id="2_6mvlb"]
+[ext_resource type="PackedScene" uid="uid://oto2em6t0e5s" path="res://scenes/overworld/pickups/DPOrb.tscn" id="2_e3pvl"]
 [ext_resource type="Texture2D" uid="uid://l5m07mlis2om" path="res://assets/Pickups/E.png" id="3_6mvlb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e3pvl"]
 radius = 149.03
 
-[node name="Chest" type="Node2D"]
+[node name="Chest" type="Area2D"]
 script = ExtResource("1_axsbj")
+dp_orb_scene = ExtResource("2_e3pvl")
 
-[node name="Closed_Chest" type="Sprite2D" parent="."]
+[node name="Closed" type="Sprite2D" parent="."]
 position = Vector2(4, 6)
 scale = Vector2(0.208785, 0.208785)
 texture = ExtResource("1_oytiu")
 
-[node name="Open_Chest" type="Sprite2D" parent="."]
+[node name="Open" type="Sprite2D" parent="."]
 visible = false
 scale = Vector2(0.199219, 0.199219)
 texture = ExtResource("2_6mvlb")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="E_Prompt" type="Sprite2D" parent="."]
+position = Vector2(1, -98)
+scale = Vector2(0.070974, 0.070974)
+texture = ExtResource("3_6mvlb")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(4, 11)
 shape = SubResource("CircleShape2D_e3pvl")
 
-[node name="E_Prompt" type="Sprite2D" parent="."]
-
 [node name="Timer" type="Timer" parent="."]
 
-[node name="E" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(2, -118)
-scale = Vector2(0.09, 0.09)
-texture = ExtResource("3_6mvlb")
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

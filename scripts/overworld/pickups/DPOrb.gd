@@ -1,25 +1,25 @@
-#DPOrb
+#DPOrb.gd
 extends Node2D
 
 var target_position: Vector2
 var homing := false
-var speed := 400.0
+var speed := 350.0
 
 func _ready():
-	# Random outward burst force
-	var random_vec = Vector2(randf_range(-1,1), randf_range(-1,1)).normalized()
-	position += random_vec * randf_range(10, 30)
-	
-	# Delay before homing
-	await get_tree().create_timer(0.2).timeout
+	# Burst outward randomly upon spawning
+	var random_dir = Vector2(randf_range(-1,1), randf_range(-1,1)).normalized()
+	position += random_dir * randf_range(10, 35)
+
+	# Tiny delay before homing
+	await get_tree().create_timer(randf_range(0.15, 0.28)).timeout
 	homing = true
 
 func _process(delta):
 	if homing:
-		var direction = (target_position - global_position).normalized()
-		global_position += direction * speed * delta
-		
-		# If close to UI target → award DP and disappear
-		if global_position.distance_to(target_position) < 10:
+		var dir = (target_position - global_position).normalized()
+		global_position += dir * speed * delta
+
+		# When close to the target → give DP, disappear
+		if global_position.distance_to(target_position) < 12:
 			DPManager.add_dp(1)
 			queue_free()
