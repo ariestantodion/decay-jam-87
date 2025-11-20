@@ -149,9 +149,9 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_jnwmo")
 
 [node name="Enemy" parent="." instance=ExtResource("3_jnwmo")]
 position = Vector2(759, 368)
-max_hp = 10.0
+max_hp = 150.0
 
 [node name="Enemy2" parent="." instance=ExtResource("3_jnwmo")]
 position = Vector2(482, 368)
-max_hp = 10.0
+max_hp = 150.0
 move_direction = -1
