@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://l5m07mlis2om"
-path="res://.godot/imported/E.png-b98cf8a61c240ee9d007e3d7d60ed22d.ctex"
+uid="uid://0dp7r42tm220"
+path="res://.godot/imported/Poison_Orb.png-d08183664793b6dd4e759b07da2b8585.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pickups/E.png"
-dest_files=["res://.godot/imported/E.png-b98cf8a61c240ee9d007e3d7d60ed22d.ctex"]
+source_file="res://assets/overworld/shrines/Poison_Orb.png"
+dest_files=["res://.godot/imported/Poison_Orb.png-d08183664793b6dd4e759b07da2b8585.ctex"]
 
 [params]
 

@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://csobpib3t2we4"]
 
 [ext_resource type="Script" uid="uid://cjo4uof1xvdcb" path="res://scripts/overworld/pickups/Chest.gd" id="1_axsbj"]
-[ext_resource type="Texture2D" uid="uid://bo51glodm4a4a" path="res://assets/Pickups/Chest_Closed.png" id="1_oytiu"]
-[ext_resource type="Texture2D" uid="uid://d267uxe58dna0" path="res://assets/Pickups/Chest_Open.png" id="2_6mvlb"]
+[ext_resource type="Texture2D" uid="uid://bo51glodm4a4a" path="res://assets/overworld/Pickups/Chest_Closed.png" id="1_oytiu"]
+[ext_resource type="Texture2D" uid="uid://d267uxe58dna0" path="res://assets/overworld/Pickups/Chest_Open.png" id="2_6mvlb"]
 [ext_resource type="PackedScene" uid="uid://oto2em6t0e5s" path="res://scenes/overworld/pickups/DPOrb.tscn" id="2_e3pvl"]
-[ext_resource type="Texture2D" uid="uid://l5m07mlis2om" path="res://assets/Pickups/E.png" id="3_6mvlb"]
+[ext_resource type="Texture2D" uid="uid://l5m07mlis2om" path="res://assets/overworld/E.png" id="3_6mvlb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e3pvl"]
 radius = 149.03

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ch8yan165ncbd"]
 
 [ext_resource type="Script" uid="uid://ddf5tgh4sydop" path="res://scripts/overworld/Player.gd" id="1_yo0ha"]
-[ext_resource type="Texture2D" uid="uid://x6uokkm346yh" path="res://assets/characters/Death Sprite.png" id="2_yo0ha"]
+[ext_resource type="Texture2D" uid="uid://x6uokkm346yh" path="res://assets/overworld/characters/Death Sprite.png" id="2_yo0ha"]
 [ext_resource type="Script" uid="uid://3o22myntnqs1" path="res://scripts/overworld/CameraFollow.gd" id="3_1wojb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hs7oq"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bo51glodm4a4a"
-path="res://.godot/imported/Chest_Closed.png-1b7bc22ac0498708806fa75b6265aca0.ctex"
+uid="uid://bq1xutu082hxx"
+path="res://.godot/imported/Plant_Enemy.png-15e7733048b17cbff59084752cea00dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pickups/Chest_Closed.png"
-dest_files=["res://.godot/imported/Chest_Closed.png-1b7bc22ac0498708806fa75b6265aca0.ctex"]
+source_file="res://assets/overworld/characters/Plant_Enemy.png"
+dest_files=["res://.godot/imported/Plant_Enemy.png-15e7733048b17cbff59084752cea00dd.ctex"]
 
 [params]
 

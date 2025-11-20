@@ -2,9 +2,17 @@
 
 [ext_resource type="Script" uid="uid://cc4hnbb77vjca" path="res://scripts/overworld/UI/DP_UI.gd" id="1_amrpv"]
 [ext_resource type="Texture2D" uid="uid://bwoe5i0006ath" path="res://assets/ui/UI_DP_Counter.png" id="2_kmlfo"]
-[ext_resource type="Texture2D" uid="uid://bgsmgx646or0v" path="res://assets/Pickups/DP_Orb.png" id="3_fschw"]
+[ext_resource type="Texture2D" uid="uid://bgsmgx646or0v" path="res://assets/overworld/Pickups/DP_Orb.png" id="3_fschw"]
 
 [node name="UI" type="CanvasLayer"]
+
+[node name="PopupPanel" type="PopupPanel" parent="."]
+
+[node name="Label" type="Label" parent="PopupPanel"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 96.0
+offset_bottom = 96.0
 
 [node name="DP_UI" type="Control" parent="."]
 layout_mode = 3

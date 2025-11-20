@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d267uxe58dna0"
-path="res://.godot/imported/Chest_Open.png-4ffaa2296f39cf8b0bc4b6b21c4963e6.ctex"
+uid="uid://cxe1bj8i2ldde"
+path="res://.godot/imported/Poison_Shrine_Base.png-8a9a5b8f23739cefe5c09c84610f59df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pickups/Chest_Open.png"
-dest_files=["res://.godot/imported/Chest_Open.png-4ffaa2296f39cf8b0bc4b6b21c4963e6.ctex"]
+source_file="res://assets/overworld/shrines/Poison_Shrine_Base.png"
+dest_files=["res://.godot/imported/Poison_Shrine_Base.png-8a9a5b8f23739cefe5c09c84610f59df.ctex"]
 
 [params]
 
