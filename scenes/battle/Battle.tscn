@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c223nmcf65ug5"]
 
 [ext_resource type="Script" uid="uid://80dglyw6v1ft" path="res://scripts/battle/Battle.gd" id="1_2h7oj"]
-[ext_resource type="Texture2D" uid="uid://b57y8oryhnxn4" path="res://Assets/Placeholder Art/backdrop.jpg" id="1_vr6xi"]
+[ext_resource type="Texture2D" uid="uid://b57y8oryhnxn4" path="res://assets/Placeholder Art/backdrop.jpg" id="1_vr6xi"]
 [ext_resource type="PackedScene" uid="uid://8nx37igr05ht" path="res://scenes/battle/Enemy.tscn" id="1_wvl2i"]
 
 [node name="Battle" type="Node2D"]

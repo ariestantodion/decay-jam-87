@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctsc82seiwog0"
-path="res://.godot/imported/angry_sprite.png-caff990ff13a93643ff936827ce07cbf.ctex"
+uid="uid://x6uokkm346yh"
+path="res://.godot/imported/Death Sprite.png-8b222181755d143c1765479a10b0549b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Placeholder Art/angry_sprite.png"
-dest_files=["res://.godot/imported/angry_sprite.png-caff990ff13a93643ff936827ce07cbf.ctex"]
+source_file="res://assets/characters/Death Sprite.png"
+dest_files=["res://.godot/imported/Death Sprite.png-8b222181755d143c1765479a10b0549b.ctex"]
 
 [params]
 

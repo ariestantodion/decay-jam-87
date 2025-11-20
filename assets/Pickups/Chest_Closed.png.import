@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctsc82seiwog0"
-path="res://.godot/imported/angry_sprite.png-caff990ff13a93643ff936827ce07cbf.ctex"
+uid="uid://bo51glodm4a4a"
+path="res://.godot/imported/Chest_Closed.png-1b7bc22ac0498708806fa75b6265aca0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Placeholder Art/angry_sprite.png"
-dest_files=["res://.godot/imported/angry_sprite.png-caff990ff13a93643ff936827ce07cbf.ctex"]
+source_file="res://assets/Pickups/Chest_Closed.png"
+dest_files=["res://.godot/imported/Chest_Closed.png-1b7bc22ac0498708806fa75b6265aca0.ctex"]
 
 [params]
 

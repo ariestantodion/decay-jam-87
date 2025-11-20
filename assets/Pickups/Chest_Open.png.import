@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgcbahhetgb0y"
-path="res://.godot/imported/Death.png-371d493cf10c9ecb3e5b09d7b9af2013.ctex"
+uid="uid://d267uxe58dna0"
+path="res://.godot/imported/Chest_Open.png-4ffaa2296f39cf8b0bc4b6b21c4963e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/Death.png"
-dest_files=["res://.godot/imported/Death.png-371d493cf10c9ecb3e5b09d7b9af2013.ctex"]
+source_file="res://assets/Pickups/Chest_Open.png"
+dest_files=["res://.godot/imported/Chest_Open.png-4ffaa2296f39cf8b0bc4b6b21c4963e6.ctex"]
 
 [params]
 

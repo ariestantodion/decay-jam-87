@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://ch8yan165ncbd"]
+
+[ext_resource type="Script" uid="uid://ddf5tgh4sydop" path="res://scripts/overworld/Player.gd" id="1_yo0ha"]
+[ext_resource type="Texture2D" uid="uid://x6uokkm346yh" path="res://assets/characters/Death Sprite.png" id="2_yo0ha"]
+[ext_resource type="Script" uid="uid://3o22myntnqs1" path="res://scripts/overworld/CameraFollow.gd" id="3_1wojb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hs7oq"]
+radius = 52.0
+height = 124.0
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+script = ExtResource("1_yo0ha")
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Visuals"]
+position = Vector2(6.81248, -8.18749)
+scale = Vector2(0.134399, 0.134399)
+texture = ExtResource("2_yo0ha")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.18748, -0.1875)
+shape = SubResource("CapsuleShape2D_hs7oq")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 4.0
+rotation_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.03
+drag_top_margin = 0.03
+drag_right_margin = 0.03
+drag_bottom_margin = 0.03
+script = ExtResource("3_1wojb")
