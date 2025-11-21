@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dv4rum11m7fiy"
-path="res://.godot/imported/Plant_Enemy.png-aff317d3df21fa04f4621642f60c1ecb.ctex"
+uid="uid://x6uokkm346yh"
+path="res://.godot/imported/Death Sprite.png-028bea7a04ead82b1298bb78b0b83028.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/Plant_Enemy.png"
-dest_files=["res://.godot/imported/Plant_Enemy.png-aff317d3df21fa04f4621642f60c1ecb.ctex"]
+source_file="res://assets/overworld/characters/Death Sprite.png"
+dest_files=["res://.godot/imported/Death Sprite.png-028bea7a04ead82b1298bb78b0b83028.ctex"]
 
 [params]
 
