@@ -1,15 +1,16 @@
-[gd_scene load_steps=10 format=3 uid="uid://c223nmcf65ug5"]
+[gd_scene load_steps=12 format=3 uid="uid://c223nmcf65ug5"]
 
 [ext_resource type="Script" uid="uid://80dglyw6v1ft" path="res://scripts/battle/Battle.gd" id="1_2h7oj"]
 [ext_resource type="Texture2D" uid="uid://b57y8oryhnxn4" path="res://Assets/Placeholder Art/backdrop.jpg" id="1_vr6xi"]
 [ext_resource type="PackedScene" uid="uid://ftqypqavqjq8" path="res://scenes/battle/enemies/PlantEnemy.tscn" id="3_jnwmo"]
+[ext_resource type="PackedScene" uid="uid://dr66n8ytylf0" path="res://scenes/battle/enemies/AnimalEnemy.tscn" id="4_w6b63"]
 
 [sub_resource type="Animation" id="Animation_w6b63"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/path = NodePath("Animations/FadeBlock:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -21,10 +22,22 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/path = NodePath("Animations/FadeBlock:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Animations/DamageBlock:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -36,7 +49,7 @@ resource_name = "fade_in"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/path = NodePath("Animations/FadeBlock:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -48,7 +61,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/path = NodePath("Animations/FadeBlock:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -57,13 +70,25 @@ tracks/1/keys = {
 "update": 1,
 "values": [true, false]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Animations/DamageBlock:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_emwda"]
 resource_name = "fade_out"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/path = NodePath("Animations/FadeBlock:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -75,7 +100,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/path = NodePath("Animations/FadeBlock:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -85,8 +110,36 @@ tracks/1/keys = {
 "values": [true]
 }
 
+[sub_resource type="Animation" id="Animation_vbfmk"]
+resource_name = "PlayerDamageEffect"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Animations/FadeBlock:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Animations/DamageBlock:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false, true, false]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vbfmk"]
 _data = {
+&"PlayerDamageEffect": SubResource("Animation_vbfmk"),
 &"RESET": SubResource("Animation_w6b63"),
 &"fade_in": SubResource("Animation_jnwmo"),
 &"fade_out": SubResource("Animation_emwda")
@@ -122,17 +175,24 @@ script = ExtResource("1_2h7oj")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 2
 
-[node name="Transition" type="AnimationPlayer" parent="CanvasLayer"]
+[node name="Animations" type="AnimationPlayer" parent="CanvasLayer"]
 libraries = {
 &"": SubResource("AnimationLibrary_vbfmk")
 }
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Transition"]
+[node name="FadeBlock" type="ColorRect" parent="CanvasLayer/Animations"]
 offset_left = -9.0
 offset_top = -19.0
 offset_right = 1305.0
 offset_bottom = 749.0
 color = Color(0, 0, 0, 1)
+
+[node name="DamageBlock" type="ColorRect" parent="CanvasLayer/Animations"]
+offset_left = -59.0
+offset_top = -32.0
+offset_right = 1348.0
+offset_bottom = 782.0
+color = Color(1, 0.172549, 0.133333, 0.278431)
 
 [node name="Backdrop" type="Sprite2D" parent="."]
 position = Vector2(646, 363)
@@ -147,11 +207,20 @@ offset_bottom = 46.0
 theme_override_styles/background = SubResource("StyleBoxFlat_w6b63")
 theme_override_styles/fill = SubResource("StyleBoxFlat_jnwmo")
 
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_right = 4.0
+offset_bottom = 27.0
+
 [node name="Enemy" parent="." instance=ExtResource("3_jnwmo")]
 position = Vector2(759, 368)
+min_attack_delay = 1
 max_hp = 150.0
 
 [node name="Enemy2" parent="." instance=ExtResource("3_jnwmo")]
 position = Vector2(482, 368)
+max_attack_delay = 7
 max_hp = 150.0
 move_direction = -1
+
+[node name="Enemy3" parent="." instance=ExtResource("4_w6b63")]
+position = Vector2(653, 568)
