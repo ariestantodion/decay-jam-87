@@ -1,3 +1,4 @@
+#PlantEnemy.gd
 extends CharacterBody2D
 
 @onready var enemy_hp = $EnemyHealth

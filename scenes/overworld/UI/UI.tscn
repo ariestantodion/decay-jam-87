@@ -1,11 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://ckafvnefn66tl"]
+[gd_scene load_steps=8 format=3 uid="uid://ckafvnefn66tl"]
 
 [ext_resource type="Script" uid="uid://cc4hnbb77vjca" path="res://scripts/overworld/UI/DP_UI.gd" id="1_amrpv"]
+[ext_resource type="Script" uid="uid://bn380bewd6ww7" path="res://scenes/overworld/UI/UI.gd" id="1_xqjl5"]
 [ext_resource type="Texture2D" uid="uid://bwoe5i0006ath" path="res://assets/ui/UI_DP_Counter.png" id="2_amrpv"]
 [ext_resource type="Texture2D" uid="uid://bgsmgx646or0v" path="res://assets/overworld/Pickups/DP_Orb.png" id="3_fschw"]
+[ext_resource type="Script" uid="uid://d1gtyq2og3nej" path="res://scripts/overworld/UI/HealthUI.gd" id="4_kmlfo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_amrpv"]
+bg_color = Color(0.999973, 0.711641, 0.665354, 1)
+shadow_color = Color(0, 0, 0, 1)
+shadow_size = 1
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kmlfo"]
+bg_color = Color(0.835294, 0, 0, 1)
 
 [node name="UI" type="CanvasLayer"]
-metadata/_edit_vertical_guides_ = [1280.0, 12.0]
+script = ExtResource("1_xqjl5")
+metadata/_edit_vertical_guides_ = [3750.0, -1637.0]
 
 [node name="DP_UI" type="Control" parent="."]
 layout_mode = 3
@@ -59,9 +71,6 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 
-[node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(12, 330)
-
 [node name="PopupPanel" type="Control" parent="." groups=["popup_panel"]]
 visible = false
 layout_mode = 3
@@ -84,3 +93,31 @@ theme_override_font_sizes/font_size = 130
 text = "\"\""
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="HealthUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_kmlfo")
+
+[node name="TextureRect" type="TextureRect" parent="HealthUI"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = -6.0
+offset_right = 1731.0
+offset_bottom = 1333.0
+scale = Vector2(0.203466, 0.109042)
+texture = ExtResource("2_amrpv")
+
+[node name="HealthBar" type="ProgressBar" parent="HealthUI"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 61.0
+offset_right = 329.0
+offset_bottom = 88.0
+theme_override_styles/background = SubResource("StyleBoxFlat_amrpv")
+theme_override_styles/fill = SubResource("StyleBoxFlat_kmlfo")
+show_percentage = false

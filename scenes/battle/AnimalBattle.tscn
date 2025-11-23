@@ -1,10 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://b031mq4aq2w7n"]
+[gd_scene load_steps=19 format=3 uid="uid://c3e0wa2djjg01"]
 
 [ext_resource type="Script" uid="uid://80dglyw6v1ft" path="res://scripts/battle/Battle.gd" id="1_atboo"]
-[ext_resource type="Texture2D" uid="uid://dy6qptre2p8dr" path="res://assets/Battle Backdrops and UI/PlantBattle.jpg" id="2_i22ns"]
+[ext_resource type="Texture2D" uid="uid://bfhmidch6e4f4" path="res://assets/Battle Backdrops and UI/farm_backdrop.png" id="2_atboo"]
 [ext_resource type="Texture2D" uid="uid://dy22xt2bq4j35" path="res://assets/Battle Backdrops and UI/x.png" id="3_cpt2l"]
 [ext_resource type="Texture2D" uid="uid://dhemoeawhlp34" path="res://assets/Battle Backdrops and UI/z.png" id="4_0dagk"]
-[ext_resource type="PackedScene" uid="uid://ftqypqavqjq8" path="res://scenes/battle/enemies/PlantEnemy.tscn" id="5_hfdoj"]
+[ext_resource type="PackedScene" uid="uid://dr66n8ytylf0" path="res://scenes/battle/enemies/AnimalEnemy.tscn" id="5_i22ns"]
 
 [sub_resource type="Animation" id="Animation_vbfmk"]
 resource_name = "PlayerDamageEffect"
@@ -231,6 +231,11 @@ script = ExtResource("1_atboo")
 anchor_mode = 0
 zoom = Vector2(0.635, 0.625)
 
+[node name="FarmBackdrop" type="Sprite2D" parent="."]
+position = Vector2(1010, 574.813)
+scale = Vector2(2.61979, 2.66137)
+texture = ExtResource("2_atboo")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 2
 
@@ -254,11 +259,6 @@ offset_right = 2193.0
 offset_bottom = 1217.0
 color = Color(1, 0.172549, 0.133333, 0.278431)
 metadata/_edit_use_anchors_ = true
-
-[node name="PlantBattle" type="Sprite2D" parent="."]
-position = Vector2(1009, 577)
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("2_i22ns")
 
 [node name="X" type="Sprite2D" parent="."]
 position = Vector2(1631, 99)
@@ -318,24 +318,24 @@ theme_override_styles/background = SubResource("StyleBoxFlat_k810l")
 theme_override_styles/fill = SubResource("StyleBoxFlat_4iwvf")
 show_percentage = false
 
-[node name="Enemy" parent="." instance=ExtResource("5_hfdoj")]
-position = Vector2(1057, 532)
-scale = Vector2(0.795, 0.795)
+[node name="Enemy" parent="." instance=ExtResource("5_i22ns")]
+position = Vector2(1528, 982)
+scale = Vector2(1.41, 1.41)
 min_attack_delay = 1
-max_hp = 150.0
-
-[node name="Enemy2" parent="." instance=ExtResource("5_hfdoj")]
-position = Vector2(1447, 612)
-min_attack_delay = 5
-max_attack_delay = 7
-max_hp = 150.0
 move_direction = -1
 
-[node name="Enemy3" parent="." instance=ExtResource("5_hfdoj")]
-position = Vector2(300, 654)
-scale = Vector2(1.47, 1.47)
+[node name="Enemy2" parent="." instance=ExtResource("5_i22ns")]
+position = Vector2(1198, 696)
+scale = Vector2(0.83, 0.83)
 
-[node name="Enemy4" parent="." instance=ExtResource("5_hfdoj")]
-position = Vector2(954, 902)
-scale = Vector2(1.735, 1.735)
-min_attack_delay = 4
+[node name="Enemy3" parent="." instance=ExtResource("5_i22ns")]
+position = Vector2(362, 881)
+scale = Vector2(1.15, 1.15)
+min_attack_delay = 6
+
+[node name="Enemy4" parent="." instance=ExtResource("5_i22ns")]
+position = Vector2(795, 656)
+scale = Vector2(0.55, 0.55)
+min_attack_delay = 5
+max_attack_delay = 6
+move_direction = -1
