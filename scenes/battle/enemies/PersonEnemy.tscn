@@ -1,0 +1,182 @@
+[gd_scene load_steps=13 format=3 uid="uid://l4e7uw6waa6x"]
+
+[ext_resource type="Script" uid="uid://dt4a2v7ocicqb" path="res://scripts/battle/enemies/animal_enemy.gd" id="1_n1wl0"]
+[ext_resource type="Texture2D" uid="uid://cmqrsxbskh1gr" path="res://Assets/characters/person_1.png" id="2_n1wl0"]
+[ext_resource type="Texture2D" uid="uid://c7vm8bqmbd628" path="res://Assets/characters/person_2.png" id="3_q6kk5"]
+[ext_resource type="Texture2D" uid="uid://byqrnj0oxxvhm" path="res://Assets/characters/person_3.png" id="4_km3q0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4ufey"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_n1wl0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_q6kk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_km3q0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_51x3w"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hr68b"]
+bg_color = Color(1, 0.172549, 0.133333, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jt4ur"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xtvj5"]
+bg_color = Color(1.34766e-06, 0.666268, 0.811969, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Animation" id="Animation_xtvj5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EnemyHealth:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("EnemyAttack:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_hr68b"]
+resource_name = "enemy_fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EnemyHealth:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("EnemyAttack:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jt4ur"]
+_data = {
+&"RESET": SubResource("Animation_xtvj5"),
+&"enemy_fade_out": SubResource("Animation_hr68b")
+}
+
+[node name="Enemy" type="CharacterBody2D"]
+position = Vector2(623, 277)
+script = ExtResource("1_n1wl0")
+max_hp = 200.0
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 1.5
+
+[node name="EnemySprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(-3, 44)
+scale = Vector2(0.16, 0.16)
+sprite_frames = SubResource("SpriteFrames_4ufey")
+
+[node name="EnemyHealth" type="ProgressBar" parent="."]
+offset_left = -126.0
+offset_top = -134.0
+offset_right = 129.0
+offset_bottom = -107.0
+theme_override_styles/background = SubResource("StyleBoxFlat_51x3w")
+theme_override_styles/fill = SubResource("StyleBoxFlat_hr68b")
+show_percentage = false
+
+[node name="EnemyAttack" type="ProgressBar" parent="."]
+offset_left = -67.0
+offset_top = -91.0
+offset_right = 65.0
+offset_bottom = -64.0
+theme_override_styles/background = SubResource("StyleBoxFlat_jt4ur")
+theme_override_styles/fill = SubResource("StyleBoxFlat_xtvj5")
+show_percentage = false
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(121, 59)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(-121, -58)
+polygon = PackedVector2Array(0, -52, 15, -49, 27, -44, 39, -35, 46, -21, 48, -4, 41, 14, 31, 23, 45, 37, 53, 54, 57, 71, 61, 77, 59, 84, 46, 85, 45, 96, 40, 100, 40, 118, 34, 124, 34, 128, 3, 131, 1, 128, -4, 128, -5, 130, -37, 129, -39, 122, -44, 118, -45, 99, -50, 96, -51, 85, -63, 87, -67, 76, -63, 72, -58, 50, -43, 26, -34, 22, -46, 6, -49, -15, -41, -35, -27, -46, -8, -52)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_jt4ur")
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, -52, 15, -49, 27, -44, 39, -35, 46, -21, 48, -4, 41, 14, 31, 23, 45, 37, 53, 54, 57, 71, 61, 77, 59, 84, 46, 85, 45, 96, 40, 100, 40, 118, 34, 124, 34, 128, 3, 131, 1, 128, -4, 128, -5, 130, -37, 129, -39, 122, -44, 118, -45, 99, -50, 96, -51, 85, -63, 87, -67, 76, -63, 72, -58, 50, -43, 26, -34, 22, -46, 6, -49, -15, -41, -35, -27, -46, -8, -52)
+
+[connection signal="timeout" from="Timer" to="." method="change_move_direction"]
+[connection signal="mouse_entered" from="Area2D" to="." method="area_2d_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="area_2d_exited"]
