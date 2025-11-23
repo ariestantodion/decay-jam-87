@@ -1,17 +1,47 @@
-[gd_scene load_steps=10 format=3 uid="uid://dbnnfbrbvnrjn"]
+[gd_scene load_steps=11 format=3 uid="uid://dbnnfbrbvnrjn"]
 
 [ext_resource type="Script" uid="uid://cy8ljqn2sw54f" path="res://scripts/overworld/shrines/PoisonShrine.gd" id="1_adn5m"]
 [ext_resource type="Texture2D" uid="uid://cxe1bj8i2ldde" path="res://assets/overworld/shrines/Poison_Shrine_Base.png" id="2_r8riq"]
 [ext_resource type="Texture2D" uid="uid://l5m07mlis2om" path="res://assets/overworld/E.png" id="3_2tfq7"]
-[ext_resource type="Texture2D" uid="uid://cui73bymu5lel" path="res://assets/overworld/shrines/GreenGlow.png" id="3_hk7ca"]
+[ext_resource type="Texture2D" uid="uid://08g3pe6ojx7q" path="res://assets/overworld/GreenGlow.png" id="3_hk7ca"]
 [ext_resource type="Texture2D" uid="uid://0dp7r42tm220" path="res://assets/overworld/shrines/Poison_Orb.png" id="4_brei0"]
 [ext_resource type="Script" uid="uid://vxtc3qy1xjdt" path="res://scripts/overworld/shrines/CutscenePlayer.gd" id="4_hk7ca"]
 
+[sub_resource type="Animation" id="Animation_hk7ca"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GlowSprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_ik5fb"]
 resource_name = "breath"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GlowSprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.270588), Color(1, 1, 1, 0.94902), Color(1, 1, 1, 0.270588)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_l4oho"]
 _data = {
+&"RESET": SubResource("Animation_hk7ca"),
 &"breath": SubResource("Animation_ik5fb")
 }
 
@@ -29,7 +59,7 @@ scale = Vector2(0.34, 0.34)
 texture = ExtResource("2_r8riq")
 
 [node name="GlowSprite" type="Sprite2D" parent="ShrineVisuals"]
-scale = Vector2(0.4, 0.4)
+scale = Vector2(0.57, 0.57)
 texture = ExtResource("3_hk7ca")
 
 [node name="AbilitySymbolSprite" type="Sprite2D" parent="ShrineVisuals"]
@@ -40,6 +70,7 @@ texture = ExtResource("4_brei0")
 libraries = {
 &"": SubResource("AnimationLibrary_l4oho")
 }
+autoplay = "breath"
 
 [node name="InteractionArea" type="Area2D" parent="."]
 
@@ -47,6 +78,7 @@ libraries = {
 shape = SubResource("CapsuleShape2D_brei0")
 
 [node name="E_Prompt" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(2, -135)
 scale = Vector2(0.0769042, 0.0769042)
 texture = ExtResource("3_2tfq7")

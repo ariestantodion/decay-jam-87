@@ -9,7 +9,7 @@ var original_cam_zoom: Vector2
 @onready var shrine := get_parent()
 @onready var visuals := shrine.get_node("ShrineVisuals")
 @onready var anim := visuals.get_node("AnimationPlayer")
-@onready var popup := get_tree().current_scene.get_node("UI/PopupPanel")
+@onready var popup := get_tree().get_nodes_in_group("popup_panel")[0]
 @onready var icon := visuals.get_node("AbilitySymbolSprite")
 
 

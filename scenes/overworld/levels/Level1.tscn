@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=4 uid="uid://gow61xa6ygao"]
+[gd_scene load_steps=13 format=4 uid="uid://gow61xa6ygao"]
 
 [ext_resource type="Texture2D" uid="uid://ck25lhwheomc5" path="res://assets/tilesets/Solaria Demo Tiles.png" id="1_8l7j1"]
+[ext_resource type="PackedScene" uid="uid://dbnnfbrbvnrjn" path="res://scenes/overworld/shrines/PoisonShrine.tscn" id="2_5oxuw"]
 [ext_resource type="PackedScene" uid="uid://ch8yan165ncbd" path="res://scenes/overworld/Player.tscn" id="2_8ht4l"]
 [ext_resource type="PackedScene" uid="uid://csobpib3t2we4" path="res://scenes/overworld/pickups/Chest.tscn" id="3_11dhr"]
 [ext_resource type="PackedScene" uid="uid://b7ciniuj6hmra" path="res://scenes/overworld/OverworldEnemy.tscn" id="4_jjx0a"]
@@ -1151,11 +1152,20 @@ polygon = PackedVector2Array(-94, 230, 161, 230, 388, -81, 391, -846, 248, -1108
 position = Vector2(36, 29)
 
 [node name="Chest" parent="." instance=ExtResource("3_11dhr")]
-position = Vector2(-185, -254)
+position = Vector2(1464, -1983)
 scale = Vector2(0.7, 0.7)
 
 [node name="OverworldEnemy" parent="." instance=ExtResource("4_jjx0a")]
-position = Vector2(207, -427)
+position = Vector2(86, -350)
 scale = Vector2(0.13, 0.13)
 
 [node name="UI" parent="." instance=ExtResource("5_jjx0a")]
+
+[node name="PoisonShrine" parent="." instance=ExtResource("2_5oxuw")]
+position = Vector2(36, -3920)
+
+[node name="Chest2" parent="." instance=ExtResource("3_11dhr")]
+position = Vector2(-916, -3885)
+
+[node name="PoisonShrine2" parent="." instance=ExtResource("2_5oxuw")]
+position = Vector2(-117, -755)

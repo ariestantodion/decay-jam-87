@@ -17,7 +17,7 @@ var opened := false
 @onready var open_sprite := $Open
 @onready var prompt := $E_Prompt
 
-# Base prompt position for proper floating
+# Base prompt position for floating
 var prompt_base_pos: Vector2
 
 
@@ -29,11 +29,11 @@ func _ready():
 
 func _process(delta):
 	if player_in_range and not opened:
-		# Floating E icon relative to its base position
+		# Floating E icon
 		var bob := sin(Time.get_ticks_msec() / 200.0) * 3
 		prompt.position = prompt_base_pos + Vector2(0, bob)
 
-		# Trigger chest opening
+		# Press E
 		if Input.is_action_just_pressed("ui_accept"):
 			open_chest()
 
@@ -59,36 +59,32 @@ func open_chest():
 	closed_sprite.visible = false
 	open_sprite.visible = true
 
-	# Determine DP reward total
+	# DP reward
 	var total_orbs := randi_range(dp_reward_min, dp_reward_max)
 
-	# Spawn DP orbs
 	spawn_dp_orbs(total_orbs)
 
 
 func spawn_dp_orbs(amount: int):
-	var ui_target_path := "UI/DP_UI/DPOrbTarget"
-	var ui_target: Control = get_tree().current_scene.get_node(ui_target_path)
-
-	if ui_target == null:
-		push_warning("DPOrbTarget not found at path: " + ui_target_path)
+	# --- GET THE DP ORB TARGET BY GROUP ---
+	var list := get_tree().get_nodes_in_group("dp_orb_target")
+	if list.is_empty():
+		push_warning("No DPOrbTarget found in group 'dp_orb_target'")
 		return
 
+	var ui_target: Control = list[0]
 	var viewport := get_viewport()
 
 	for i in range(amount):
 		var orb = dp_orb_scene.instantiate()
-
-		# Start orbs at chest position
 		orb.global_position = global_position
 
-		# SCREEN POSITION of the UI target
+		# SCREEN position of the UI target
 		var screen_pos: Vector2 = ui_target.get_global_rect().get_center()
 
-		# Convert SCREEN → WORLD using viewport transforms (NO camera calls)
+		# Convert SCREEN → WORLD using viewport transform
 		var canvas_xform: Transform2D = viewport.get_canvas_transform()
 		var world_pos: Vector2 = canvas_xform.affine_inverse() * screen_pos
 
 		orb.target_position = world_pos
-
 		get_tree().current_scene.add_child(orb)

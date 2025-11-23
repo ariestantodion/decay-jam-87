@@ -1,39 +1,38 @@
 [gd_scene load_steps=4 format=3 uid="uid://ckafvnefn66tl"]
 
 [ext_resource type="Script" uid="uid://cc4hnbb77vjca" path="res://scripts/overworld/UI/DP_UI.gd" id="1_amrpv"]
-[ext_resource type="Texture2D" uid="uid://bwoe5i0006ath" path="res://assets/ui/UI_DP_Counter.png" id="2_kmlfo"]
+[ext_resource type="Texture2D" uid="uid://bwoe5i0006ath" path="res://assets/ui/UI_DP_Counter.png" id="2_amrpv"]
 [ext_resource type="Texture2D" uid="uid://bgsmgx646or0v" path="res://assets/overworld/Pickups/DP_Orb.png" id="3_fschw"]
 
 [node name="UI" type="CanvasLayer"]
-
-[node name="PopupPanel" type="PopupPanel" parent="."]
-
-[node name="Label" type="Label" parent="PopupPanel"]
-offset_left = 4.0
-offset_top = 4.0
-offset_right = 96.0
-offset_bottom = 96.0
+metadata/_edit_vertical_guides_ = [1280.0, 12.0]
 
 [node name="DP_UI" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 1
-anchor_left = 1.0
+anchors_preset = 15
 anchor_right = 1.0
-offset_left = -40.0
-offset_bottom = 40.0
-grow_horizontal = 0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_amrpv")
 
-[node name="Background" type="TextureRect" parent="DP_UI"]
+[node name="Control" type="Control" parent="DP_UI"]
+anchors_preset = 0
+offset_left = 1235.0
+offset_top = -6.0
+offset_right = 1275.0
+offset_bottom = 34.0
+
+[node name="Background" type="TextureRect" parent="DP_UI/Control"]
 layout_mode = 0
 offset_left = -202.0
 offset_top = 9.0
 offset_right = 1334.0
 offset_bottom = 1033.0
 scale = Vector2(0.144211, 0.11654)
-texture = ExtResource("2_kmlfo")
+texture = ExtResource("2_amrpv")
 
-[node name="DP_Icon" type="TextureRect" parent="DP_UI"]
+[node name="DP_Icon" type="TextureRect" parent="DP_UI/Control"]
 layout_mode = 0
 offset_left = -178.0
 offset_top = 49.0
@@ -42,7 +41,14 @@ offset_bottom = 249.0
 scale = Vector2(0.244479, 0.244479)
 texture = ExtResource("3_fschw")
 
-[node name="DP_Label" type="Label" parent="DP_UI"]
+[node name="DPOrbTarget" type="Control" parent="DP_UI/Control" groups=["dp_orb_target"]]
+anchors_preset = 0
+offset_left = -633.0
+offset_top = -235.0
+offset_right = -533.0
+offset_bottom = -135.0
+
+[node name="DP_Label" type="Label" parent="DP_UI/Control" groups=["dp_label"]]
 layout_mode = 0
 offset_left = -122.0
 offset_top = 51.0
@@ -53,9 +59,28 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 
-[node name="DPOrbTarget" type="Control" parent="DP_UI"]
-anchors_preset = 0
-offset_left = -154.0
-offset_top = 102.0
-offset_right = -154.0
-offset_bottom = 102.0
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(12, 330)
+
+[node name="PopupPanel" type="Control" parent="." groups=["popup_panel"]]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.01257, 1.00911)
+
+[node name="Label" type="Label" parent="PopupPanel"]
+layout_mode = 0
+offset_right = 1980.0
+offset_bottom = 1118.0
+scale = Vector2(0.638353, 0.638353)
+theme_override_colors/font_color = Color(0.835294, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 130
+text = "\"\""
+horizontal_alignment = 1
+vertical_alignment = 1
