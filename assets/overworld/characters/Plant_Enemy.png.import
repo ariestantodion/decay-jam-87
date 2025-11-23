@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bq1xutu082hxx"
-path="res://.godot/imported/Plant_Enemy.png-0c03ed496f241a9f927de859eee5d1bd.ctex"
+path="res://.godot/imported/Plant_Enemy.png-15e7733048b17cbff59084752cea00dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/overworld/characters/Plant_Enemy.png"
-dest_files=["res://.godot/imported/Plant_Enemy.png-0c03ed496f241a9f927de859eee5d1bd.ctex"]
+source_file="res://assets/overworld/characters/Plant_Enemy.png"
+dest_files=["res://.godot/imported/Plant_Enemy.png-15e7733048b17cbff59084752cea00dd.ctex"]
 
 [params]
 

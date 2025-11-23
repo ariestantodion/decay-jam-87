@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cf1oqn0pu1p22"]
+
+[node name="OverworldMiniEnemies" type="Node2D"]
+
+[node name="Sprite" type="Sprite2D" parent="."]
+
+[node name="Shadow" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

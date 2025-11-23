@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://x6uokkm346yh"
-path="res://.godot/imported/Death Sprite.png-028bea7a04ead82b1298bb78b0b83028.ctex"
+uid="uid://bo51glodm4a4a"
+path="res://.godot/imported/Chest_Closed.png-dbf3e735914502193d59868010dd66b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/overworld/characters/Death Sprite.png"
-dest_files=["res://.godot/imported/Death Sprite.png-028bea7a04ead82b1298bb78b0b83028.ctex"]
+source_file="res://assets/overworld/Pickups/Chest_Closed.png"
+dest_files=["res://.godot/imported/Chest_Closed.png-dbf3e735914502193d59868010dd66b4.ctex"]
 
 [params]
 

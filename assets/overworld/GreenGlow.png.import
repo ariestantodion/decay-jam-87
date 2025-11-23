@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dugc743fmodam"
-path="res://.godot/imported/Death.png-371d493cf10c9ecb3e5b09d7b9af2013.ctex"
+uid="uid://08g3pe6ojx7q"
+path="res://.godot/imported/GreenGlow.png-16dcebbfeada09da75bf9bf031a04827.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/Death.png"
-dest_files=["res://.godot/imported/Death.png-371d493cf10c9ecb3e5b09d7b9af2013.ctex"]
+source_file="res://assets/overworld/GreenGlow.png"
+dest_files=["res://.godot/imported/GreenGlow.png-16dcebbfeada09da75bf9bf031a04827.ctex"]
 
 [params]
 

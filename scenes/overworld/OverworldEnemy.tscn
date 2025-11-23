@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b7ciniuj6hmra"]
 
 [ext_resource type="Script" uid="uid://c6qqoy4cmme1s" path="res://scripts/overworld/OverworldEnemy.gd" id="1_4r5xm"]
-[ext_resource type="Texture2D" uid="uid://dv4rum11m7fiy" path="res://assets/characters/Plant_Enemy.png" id="2_4stu6"]
+[ext_resource type="Texture2D" uid="uid://bq1xutu082hxx" path="res://assets/overworld/characters/Plant_Enemy.png" id="2_4stu6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_26lii"]
 radius = 451.0
@@ -16,6 +16,8 @@ script = ExtResource("1_4r5xm")
 [node name="Visuals" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Visuals"]
+texture_repeat = 3
+scale = Vector2(2.93437, 2.93437)
 texture = ExtResource("2_4stu6")
 
 [node name="Collision" type="Area2D" parent="."]

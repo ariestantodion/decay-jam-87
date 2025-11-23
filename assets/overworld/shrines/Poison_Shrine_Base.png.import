@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxe1bj8i2ldde"
-path="res://.godot/imported/Poison_Shrine_Base.png-9dc6ecbe2a1147b3505dbe7ca0dc57a9.ctex"
+path="res://.godot/imported/Poison_Shrine_Base.png-8a9a5b8f23739cefe5c09c84610f59df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/overworld/shrines/Poison_Shrine_Base.png"
-dest_files=["res://.godot/imported/Poison_Shrine_Base.png-9dc6ecbe2a1147b3505dbe7ca0dc57a9.ctex"]
+source_file="res://assets/overworld/shrines/Poison_Shrine_Base.png"
+dest_files=["res://.godot/imported/Poison_Shrine_Base.png-8a9a5b8f23739cefe5c09c84610f59df.ctex"]
 
 [params]
 

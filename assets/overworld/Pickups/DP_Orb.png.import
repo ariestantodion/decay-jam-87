@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://x6uokkm346yh"
-path="res://.godot/imported/Death Sprite.png-028bea7a04ead82b1298bb78b0b83028.ctex"
+uid="uid://bgsmgx646or0v"
+path="res://.godot/imported/DP_Orb.png-539810e7086fab0a8b4d6c6c37642aec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/overworld/characters/Death Sprite.png"
-dest_files=["res://.godot/imported/Death Sprite.png-028bea7a04ead82b1298bb78b0b83028.ctex"]
+source_file="res://assets/overworld/Pickups/DP_Orb.png"
+dest_files=["res://.godot/imported/DP_Orb.png-539810e7086fab0a8b4d6c6c37642aec.ctex"]
 
 [params]
 
