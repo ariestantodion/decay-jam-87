@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dy6qptre2p8dr"
-path="res://.godot/imported/PlantBattle.jpg-a46e780b130362d7855873820c042647.ctex"
+uid="uid://crh4ie808iy4p"
+path="res://.godot/imported/dog_1.png-3afd63a5ed8e5a3f4d0e74bc58470710.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Battle Backdrops and UI/PlantBattle.jpg"
-dest_files=["res://.godot/imported/PlantBattle.jpg-a46e780b130362d7855873820c042647.ctex"]
+source_file="res://Assets/characters/dog_1.png"
+dest_files=["res://.godot/imported/dog_1.png-3afd63a5ed8e5a3f4d0e74bc58470710.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dy6qptre2p8dr"
-path="res://.godot/imported/PlantBattle.jpg-a46e780b130362d7855873820c042647.ctex"
+uid="uid://bq1xutu082hxx"
+path="res://.godot/imported/Plant_Enemy.png-0c03ed496f241a9f927de859eee5d1bd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Battle Backdrops and UI/PlantBattle.jpg"
-dest_files=["res://.godot/imported/PlantBattle.jpg-a46e780b130362d7855873820c042647.ctex"]
+source_file="res://Assets/overworld/characters/Plant_Enemy.png"
+dest_files=["res://.godot/imported/Plant_Enemy.png-0c03ed496f241a9f927de859eee5d1bd.ctex"]
 
 [params]
 

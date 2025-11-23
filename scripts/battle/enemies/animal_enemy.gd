@@ -161,7 +161,7 @@ func _ready():
 	enemy_hp.value = max_hp
 	
 func _process(delta):
-	#move_and_slide()
+	move_and_slide()
 	if not initial_attack_complete:
 		initial_attack_delay()
 	if not is_stunned and enemy_attack.value < enemy_attack.max_value and not delay_active and BattleManager.player_hp > 0:
