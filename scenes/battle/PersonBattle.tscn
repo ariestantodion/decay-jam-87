@@ -1,9 +1,9 @@
 [gd_scene load_steps=19 format=3 uid="uid://d3fq7xev2udt8"]
 
 [ext_resource type="Script" uid="uid://80dglyw6v1ft" path="res://scripts/battle/Battle.gd" id="1_q541j"]
-[ext_resource type="Texture2D" uid="uid://blnbofsghmqr3" path="res://Assets/Battle Backdrops and UI/cartooncity0001.jpg" id="2_q541j"]
-[ext_resource type="Texture2D" uid="uid://dy22xt2bq4j35" path="res://Assets/Battle Backdrops and UI/x.png" id="3_qouat"]
-[ext_resource type="Texture2D" uid="uid://dhemoeawhlp34" path="res://Assets/Battle Backdrops and UI/z.png" id="4_8qst6"]
+[ext_resource type="Texture2D" uid="uid://blnbofsghmqr3" path="res://assets/Battle Backdrops and UI/cartooncity0001.jpg" id="2_q541j"]
+[ext_resource type="Texture2D" uid="uid://dy22xt2bq4j35" path="res://assets/Battle Backdrops and UI/x.png" id="3_qouat"]
+[ext_resource type="Texture2D" uid="uid://dhemoeawhlp34" path="res://assets/Battle Backdrops and UI/z.png" id="4_8qst6"]
 [ext_resource type="PackedScene" uid="uid://l4e7uw6waa6x" path="res://scenes/battle/enemies/PersonEnemy.tscn" id="5_3n3kd"]
 
 [sub_resource type="Animation" id="Animation_vbfmk"]

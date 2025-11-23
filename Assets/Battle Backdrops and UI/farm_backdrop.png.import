@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfhmidch6e4f4"
-path="res://.godot/imported/farm_backdrop.png-a6128eb11571cffbf0b825489fb0c0c9.ctex"
+path="res://.godot/imported/farm_backdrop.png-5f924ed54ea019df259bf00ab58ad36b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Battle Backdrops and UI/farm_backdrop.png"
-dest_files=["res://.godot/imported/farm_backdrop.png-a6128eb11571cffbf0b825489fb0c0c9.ctex"]
+source_file="res://assets/Battle Backdrops and UI/farm_backdrop.png"
+dest_files=["res://.godot/imported/farm_backdrop.png-5f924ed54ea019df259bf00ab58ad36b.ctex"]
 
 [params]
 

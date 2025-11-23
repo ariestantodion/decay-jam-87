@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhemoeawhlp34"
-path="res://.godot/imported/z.png-3ef36ccc20a96764f8ef0d4cc68eed86.ctex"
+path="res://.godot/imported/z.png-aaf2dac0b5050a89f63d9f5b3e795060.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Battle Backdrops and UI/z.png"
-dest_files=["res://.godot/imported/z.png-3ef36ccc20a96764f8ef0d4cc68eed86.ctex"]
+source_file="res://assets/Battle Backdrops and UI/z.png"
+dest_files=["res://.godot/imported/z.png-aaf2dac0b5050a89f63d9f5b3e795060.ctex"]
 
 [params]
 

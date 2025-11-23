@@ -1,9 +1,9 @@
 [gd_scene load_steps=19 format=3 uid="uid://b031mq4aq2w7n"]
 
 [ext_resource type="Script" uid="uid://80dglyw6v1ft" path="res://scripts/battle/Battle.gd" id="1_atboo"]
-[ext_resource type="Texture2D" uid="uid://dy6qptre2p8dr" path="res://Assets/Battle Backdrops and UI/PlantBattle.jpg" id="2_i22ns"]
-[ext_resource type="Texture2D" uid="uid://dy22xt2bq4j35" path="res://Assets/Battle Backdrops and UI/x.png" id="3_cpt2l"]
-[ext_resource type="Texture2D" uid="uid://dhemoeawhlp34" path="res://Assets/Battle Backdrops and UI/z.png" id="4_0dagk"]
+[ext_resource type="Texture2D" uid="uid://dy6qptre2p8dr" path="res://assets/Battle Backdrops and UI/PlantBattle.jpg" id="2_i22ns"]
+[ext_resource type="Texture2D" uid="uid://dy22xt2bq4j35" path="res://assets/Battle Backdrops and UI/x.png" id="3_cpt2l"]
+[ext_resource type="Texture2D" uid="uid://dhemoeawhlp34" path="res://assets/Battle Backdrops and UI/z.png" id="4_0dagk"]
 [ext_resource type="PackedScene" uid="uid://ftqypqavqjq8" path="res://scenes/battle/enemies/PlantEnemy.tscn" id="5_hfdoj"]
 
 [sub_resource type="Animation" id="Animation_vbfmk"]

@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://car4sdeuutpf7"]
 
 [ext_resource type="Script" uid="uid://80dglyw6v1ft" path="res://scripts/battle/Battle.gd" id="1_at56k"]
-[ext_resource type="Texture2D" uid="uid://b57y8oryhnxn4" path="res://Assets/Placeholder Art/backdrop.jpg" id="2_dcq1e"]
-[ext_resource type="PackedScene" uid="uid://8nx37igr05ht" path="res://scenes/battle/enemies/EnemyModel.tscn" id="3_ix1eh"]
+[ext_resource type="Texture2D" uid="uid://b57y8oryhnxn4" path="res://assets/Placeholder Art/backdrop.jpg" id="2_dcq1e"]
+[ext_resource type="PackedScene" uid="uid://ftqypqavqjq8" path="res://scenes/battle/enemies/PlantEnemy.tscn" id="3_ix1eh"]
 
 [node name="Battle" type="Node2D"]
 script = ExtResource("1_at56k")
